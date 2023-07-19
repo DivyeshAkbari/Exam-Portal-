@@ -1,0 +1,39 @@
+<mat-card *ngFor="let c of quizzes">      
+        <!-- <mat-list-item *ngFor="let c of quizzes"> -->
+            <div mat-card-avatar class="example-header-image column"></div>
+            <mat-list >
+                <div class="row shifter">
+                    <div class="column">
+                        <!-- <mat-icon class="icon-css" mat-list-icon>category</mat-icon> -->
+                    </div>
+                    <div class="column column-margin">
+                        <div mat-line >{{c.title}}</div>
+                    </div>
+                    <div class="container">
+                         <div class="column column-margin1">
+                            <mat-card-subtitle>{{c.category.title}}</mat-card-subtitle>
+                         </div>
+                    </div>
+                </div>
+                <mat-divider></mat-divider>
+                <div class="content-shifter">
+                    <mat-card-content ><p>{{c.description}}</p></mat-card-content>
+                </div>
+                
+            </mat-list>
+            <mat-card-actions class="btn-shifter">
+                <button mat-raised-button color="accent" [routerLink]="'/admin/view-questions/'+c.qid+'/'+c.title">Question</button>
+                <button mat-stroked-button color="accent" class="ml20">Max Marks {{c.maxMarks}}</button>
+                <button mat-stroked-button color="accent" class="ml20">question {{c.numberofQuestions}}</button>
+                <button mat-raised-button color="accent" class="ml20" [routerLink]="'/admin/quiz/'+c.qid">Update</button>
+                <button mat-raised-button color="accent" class="ml20">Attempts</button>
+                <button mat-flat-button color="accent" (click)="deleteqQuiz(c.qid)">Delete</button>
+            </mat-card-actions>
+        <!-- </mat-list-item> -->
+        <!-- <div class="container text-center mt20">
+            <button routerLink="/admin/add-category" mat-raised-button color="accent">Add New Quiz</button>
+        </div> -->
+</mat-card>
+<div class="container text-center btn-shifter2">
+    <button routerLink="/admin/add-quize" mat-raised-button color="accent">Add New Quiz</button>
+</div>

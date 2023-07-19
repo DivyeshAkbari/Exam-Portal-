@@ -1,0 +1,38 @@
+.ml50{
+    margin-left: 50px !important;
+}
+.ml50{
+    margin-top: -10px !important;
+}
+.icon-css{
+    margin-bottom: 30px !important;
+    margin-left: 20px !important;
+}
+.column-margin
+{
+    margin-left: 20px !important;
+}
+.column-margin1{
+    margin-top: 5px !important;
+    margin-left: 5px !important;
+}
+
+.example-header-image {
+    background-image: url('../../../../assets/exam.png');
+    background-size: cover;
+}
+.shifter{
+    margin-left: 40px !important;
+    margin-top: -65px !important;
+}
+.content-shifter{
+    margin-top: 5px !important;
+}
+.btn-shifter{
+    margin-top: -20px;
+}
+.btn-shifter2{
+    margin-top: 10px;
+    margin-left: -70px;
+
+}

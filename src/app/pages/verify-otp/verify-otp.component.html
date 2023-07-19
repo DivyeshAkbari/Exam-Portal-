@@ -1,0 +1,23 @@
+<div class="bootstrap-wrapper">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <mat-card class="mt100">
+                    <div class="container text-center">
+                        <img class="img" src="../../../assets/logo.jpg" alt="">
+                    </div>
+                    <h1 class="text-center">Forgot-Password ||</h1>
+                    <form (ngSubmit)="verifyOTP()">
+                        <mat-form-field class="full-width" appearance="outline">
+                            <mat-label>OTP</mat-label>
+                            <input type="number"  required [(ngModel)]="OTP1" name="OTP" matInput placeholder="Enter OTP Here">
+                        </mat-form-field>
+                        <div class="container text-center mb20">
+                            <button mat-raised-button color="primary">Verify OTP</button>
+                        </div>
+                    </form>
+                </mat-card>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,18 @@
+.shifter{
+    margin-bottom: 20px;
+}
+.example-radio-group {
+    display: flex;
+    flex-direction: column;
+    margin: 15px 0;
+    align-items: flex-start;
+  }
+  
+  .example-radio-button {
+    margin: -20px;
+  }
+  .shifter{
+    margin-top: 50px;
+  }
+
+  
