@@ -8,6 +8,7 @@ export class SharedService {
   email:string="";
   OTP:number=0;
   count:number=0;
+  login:boolean=false;
   constructor() { }
 
 
@@ -20,6 +21,15 @@ export class SharedService {
     return this.email;
   }
 
+  setValue(login:boolean)
+  {
+    this.login=login;
+  }
+
+  getValue()
+  {
+    return this.login;
+  }
   setOTP(data:any)
   {
     this.OTP=data;

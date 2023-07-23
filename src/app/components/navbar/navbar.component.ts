@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { LoginService } from 'src/app/services/login.service';
 import {  Router } from '@angular/router';
+import { SharedService } from 'src/app/services/shared.service';
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
@@ -10,7 +11,10 @@ export class NavbarComponent implements OnInit {
 
  public  isloggedin:any=false;
  public user:any=null;
-  constructor(public login:LoginService,private router:Router){
+ public roles:any=null;
+  constructor(public login:LoginService,private router:Router,
+    public shared:SharedService
+    ){
 
   }
   ngOnInit(): void {
@@ -22,13 +26,22 @@ export class NavbarComponent implements OnInit {
       this.isloggedin=this.login.isLoggedin();
       this.user=this.login.getUser();
     })
+
+    console.log("user is "+this.user);
+    if(localStorage.getItem('token')!=null)
+    {
+      this.isloggedin=true;
+    }
+
+    
   }
-  
+
   public logout()
   {
     this.login.logout();
     this.isloggedin=false;
     this.router.navigate( ['login']);
+    this.ngOnInit();
     //window.location.reload();
   }
 }
