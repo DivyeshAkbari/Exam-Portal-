@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { NavbarComponent } from 'src/app/components/navbar/navbar.component';
 import { CategoryService } from 'src/app/services/category.service';
 
 @Component({
@@ -26,5 +27,13 @@ export class SidebarComponent implements OnInit {
         })
       }
     )
+  }
+
+
+  @ViewChild(NavbarComponent) Navbar!:NavbarComponent;
+
+  ngAfterViewInit() {
+
+    this.Navbar.ngOnInit();
   }
 }

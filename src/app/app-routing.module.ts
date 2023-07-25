@@ -23,6 +23,7 @@ import { StartComponent } from './pages/user/start/start.component';
 import { ForgotPasswordComponent } from './pages/forgot-password/forgot-password.component';
 import { VerifyOTPComponent } from './pages/verify-otp/verify-otp.component';
 import { UpdatePasswordComponent } from './pages/update-password/update-password.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 const routes: Routes = [
   {
@@ -49,6 +50,11 @@ const routes: Routes = [
   {
     path:'verify-OTP',
     component:VerifyOTPComponent,
+    pathMatch:'full',
+  },
+  {
+    path:'navbar',
+    component:NavbarComponent,
     pathMatch:'full',
   },
   {

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import {  Router } from '@angular/router';
+import { NavbarComponent } from 'src/app/components/navbar/navbar.component';
 import { LoginService } from 'src/app/services/login.service';
 
 @Component({
@@ -10,7 +11,10 @@ import { LoginService } from 'src/app/services/login.service';
 })
 export class LoginComponent  implements OnInit{
 
-  constructor(private snack:MatSnackBar,private login:LoginService,private router:Router){
+  constructor(private snack:MatSnackBar,private login:LoginService,
+    private router:Router,
+    
+    ){
 
   }
   ngOnInit(): void {

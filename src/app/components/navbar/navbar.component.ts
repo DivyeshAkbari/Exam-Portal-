@@ -12,6 +12,9 @@ export class NavbarComponent implements OnInit {
  public  isloggedin:any=false;
  public user:any=null;
  public roles:any=null;
+ public role:any=null;
+ public isadmin:any;
+
   constructor(public login:LoginService,private router:Router,
     public shared:SharedService
     ){
@@ -33,7 +36,16 @@ export class NavbarComponent implements OnInit {
       this.isloggedin=true;
     }
 
-    
+    this.role=this.login.getUserRole();  
+
+    if(this.role=='ADMIN')
+    {
+      this.isadmin=true;
+    }
+    else
+    {
+      this.isadmin=false;
+    }
   }
 
   public logout()

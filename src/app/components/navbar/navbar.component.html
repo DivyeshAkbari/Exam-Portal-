@@ -26,13 +26,23 @@
     </a>
 
     <a 
-    *ngIf="isloggedin"
+    *ngIf="isloggedin && isadmin"
     mat-icon-button class="example-icon favorite-icon" 
     style="font-size: small; margin-right: 50px;" 
     routerLink="/admin/profile"
     aria-label="Example icon-button with heart icon">
-    {{user.username}}
-    </a>
+    {{ user.username }}
+</a>
+
+<a 
+    *ngIf="isloggedin && !isadmin"
+    mat-icon-button class="example-icon favorite-icon" 
+    style="font-size: small; margin-right: 50px;" 
+    routerLink="/normal/profile"
+    aria-label="Example icon-button with heart icon">
+    {{ user.username }}
+</a>
+
 
     <a 
     (click)="logout()"

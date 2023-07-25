@@ -79,7 +79,7 @@ import { UpdatePasswordComponent } from './pages/update-password/update-password
     ForgotPasswordComponent,
     VerifyOTPComponent,
     UpdatePasswordComponent,
-    
+    NavbarComponent,
   ],
   imports: [
     BrowserModule,
